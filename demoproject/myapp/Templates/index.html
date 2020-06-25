@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    <script src="{% static '/js/script.js' %}"></script>
+</head>
+<body>
+    <div>
+        <img src="{% static '/images/banner.png' %}" alt="No image" width = "100%">
+        <div class="container">
+            <h1>Home Page</h1>
+            <hr/>
+            <button onclick="Welcome();" class="bluebg">Click Me</button>
+            <a href="/index/">Home</a>
+            <a href="{% url 'list_all' %}">List</a>
+        </div>
+    </div>
+</body>
+</html>
