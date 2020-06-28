@@ -1,24 +1,14 @@
-<!DOCTYPE html>
-{% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }}</title>
-    <link rel="stylesheet" href="{% static '/css/style.css' %}">
-    <script src="{% static '/js/script.js' %}"></script>
-</head>
-<body>
-    <div>
-        <img src="{% static '/images/banner.png' %}" alt="No image" width = "100%">
+{% extends 'base.html' %}
+{% block content %}
         <div class="container">
-            <h1>List of all student's information</h1>
+            <center>
+            <a href="/create/" class="btn btn-primary ">Create New Students</a>
+            </center>
             <hr/>
-            <a href="/index/">Home</a>
-            <a href="{% url 'list_all' %}">List</a>
-        </div>
-        <div class="container">
-            <table width="100%" border="1">
+            <br>
+            <br>
+
+            <table class="table table-bordered">
                 <thead class="blackbg">
                     <tr>
                         <td>Id</td>
@@ -61,8 +51,4 @@
                   {% endif %}
                 </ul>
             </nav>
-
-        </div>
-    </div>
-</body>
-</html>
+{% endblock %}

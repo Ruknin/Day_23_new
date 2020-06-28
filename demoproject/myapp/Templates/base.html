@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <!-- <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    <script src="{% static '/js/script.js' %}"></script> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div>
+        <img src="{% static '/images/banner.png' %}" alt="No image" width = "100%">
+        <div class="container">
+            <hr/>
+            <a href="/index/">Home</a>
+            <a href="{% url 'list_all' %}">List</a>
+        </div>
+        <div class="container">
+            <div id="main">
+                {% block content %}
+                {% endblock %}
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
